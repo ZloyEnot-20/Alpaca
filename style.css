@@ -1,0 +1,259 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.main-block {
+  display: flex;
+  justify-content: flex-end;
+}
+
+img.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: #48bff1;
+  width: 320px;
+  height: 100vh;
+  z-index: 5;
+}
+
+.header {
+  display: flex;
+  justify-content: start;
+  min-height: 60px;
+  max-height: 60px;
+  align-items: center;
+  flex-grow: 1;
+  /* min-height: 60px; */
+  box-sizing: border-box;
+  border-radius: 0px 0px 8px 8px;
+  background-color: #043353;
+}
+
+.header__logo {
+  position: relative;
+
+  margin-left: 20px;
+}
+.header__logo-img {
+  width: 40px;
+  height: 40px;
+}
+
+.header__logo::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: 1px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #bb6bd9;
+  box-sizing: border-box;
+  border: 1px solid #043353;
+}
+
+.header__user-info {
+  display: flex;
+  margin-left: 8px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header__name {
+  color: white;
+  font-size: 10px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+.header__role {
+  font-size: 2px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  color: #f2994af0;
+}
+
+.header__arrow {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  width: 25px;
+  height: 12px;
+  cursor: pointer;
+}
+
+.content {
+  display: flex;
+  flex: 6;
+  min-height: 500px;
+  flex-direction: column;
+  /* align-items: center;
+  justify-content: space-between; */
+  padding: 15px;
+}
+
+.text {
+  background: #faf8f0;
+}
+
+.text-area {
+  border: 1px solid black;
+  flex-grow: 4;
+  max-height: 384px;
+  overflow-y: scroll;
+  background: #faf8f0;
+  border: 1px solid #043353;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 8px 8px;
+
+  /* color: rgb(0, 0, 0);
+  -webkit-mask-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(0, 0, 0, 1)),
+    to(rgba(0, 0, 0, 0))
+  );
+  opacity: 0.75; */
+}
+
+.text-area {
+}
+
+.text-area__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-area__name {
+  text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.text-area__time {
+  font-size: 10px;
+  color: rgba(4, 51, 83, 0.5);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 9em;
+
+  box-shadow: inset 1px 1px 10px #cfd1d0;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.content__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 104px;
+  flex-grow: 1;
+  background: #faf8f0;
+  border: 1px solid #043353;
+  /* box-sizing: border-box; */
+  border-radius: 8px;
+}
+
+.content__email-form {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content__name {
+  display: flex;
+  justify-content: center;
+  width: 229px;
+}
+
+.content__name input {
+  width: 190px;
+  border-radius: 8px 0px 0px 8px;
+}
+
+button {
+  border: none;
+  background: #043353;
+  border-radius: 0px 8px 8px 0px;
+  color: wheat;
+  height: 30px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+input {
+  background: #faf8f0;
+  outline: none;
+  border: 1px solid #043353;
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 229px;
+  height: 30px;
+  margin-bottom: 5px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 28px;
+  color: #043353;
+  transition: border 0.2s ease-in;
+}
+
+input:focus {
+  border: 1px solid #f2994a;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  height: 100%;
+  max-height: 40px;
+  border-radius: 8px 8px 0px 0px;
+  background-color: #043353;
+}
+
+.footer__svg{
+  cursor: pointer;
+  margin-left: 3px;
+  width: 15px;
+  height: 20px;
+  transition: transform .2s ease-in-out;
+}
+
+.footer__svg:hover{
+  transform: scale(1.1);
+}
